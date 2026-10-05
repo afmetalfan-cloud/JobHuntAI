@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Roles record",
+  "type": "object",
+  "properties": {
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "category": {
+            "enum": [
+              "direct",
+              "adjacent",
+              "stretch"
+            ]
+          },
+          "claim_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "gaps": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "learning_plan": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "requirement_conflicts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "category",
+          "claim_refs",
+          "rationale",
+          "gaps",
+          "learning_plan",
+          "requirement_conflicts"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "categories_considered": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "direct",
+          "adjacent",
+          "stretch"
+        ]
+      }
+    },
+    "category_notes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "approved": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "options",
+    "categories_considered",
+    "category_notes",
+    "approved"
+  ],
+  "additionalProperties": true
+}

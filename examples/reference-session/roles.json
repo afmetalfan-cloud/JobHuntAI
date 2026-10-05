@@ -1,0 +1,58 @@
+{
+  "options": [
+    {
+      "id": "option-1",
+      "title": "Service Coordinator",
+      "category": "direct",
+      "claim_refs": [
+        "claim-1",
+        "claim-2"
+      ],
+      "rationale": "Fictional fit example: coordination, documentation, and peer training transfer; gaps remain explicit.",
+      "gaps": [],
+      "learning_plan": [],
+      "requirement_conflicts": []
+    },
+    {
+      "id": "option-2",
+      "title": "Project Coordinator",
+      "category": "adjacent",
+      "claim_refs": [
+        "claim-1",
+        "claim-2"
+      ],
+      "rationale": "Fictional fit example: coordination, documentation, and peer training transfer; gaps remain explicit.",
+      "gaps": [
+        "Project scheduling tools"
+      ],
+      "learning_plan": [
+        "Request supported onboarding for identified gaps"
+      ],
+      "requirement_conflicts": []
+    },
+    {
+      "id": "option-3",
+      "title": "Operations Lead",
+      "category": "stretch",
+      "claim_refs": [
+        "claim-1",
+        "claim-2"
+      ],
+      "rationale": "Fictional fit example: coordination, documentation, and peer training transfer; gaps remain explicit.",
+      "gaps": [
+        "Formal supervision and capacity planning"
+      ],
+      "learning_plan": [
+        "Request supported onboarding for identified gaps"
+      ],
+      "requirement_conflicts": []
+    }
+  ],
+  "categories_considered": [
+    "direct",
+    "adjacent",
+    "stretch"
+  ],
+  "category_notes": {},
+  "approved": true
+}

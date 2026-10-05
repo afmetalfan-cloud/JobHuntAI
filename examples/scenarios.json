@@ -1,0 +1,50 @@
+[
+  {
+    "id": "retail-to-operations",
+    "fictional": true,
+    "background": "Retail supervisor with scheduling, stock accuracy, coaching, and process improvement experience.",
+    "goal": "Explore business operations roles with less weekend work.",
+    "tests": [
+      "Separate schedule requirement from preference",
+      "Transfer skills across industries",
+      "Do not invent office-system proficiency",
+      "Consider adjacent and stretch roles"
+    ]
+  },
+  {
+    "id": "lab-technician-growth",
+    "fictional": true,
+    "background": "Laboratory technician who maintains records, troubleshoots equipment, and trains colleagues without formal supervision.",
+    "goal": "Explore senior technical and quality roles.",
+    "tests": [
+      "Distinguish informal training from management",
+      "Identify mandatory credentials",
+      "Do not invent regulated qualifications",
+      "Research current local market comparators"
+    ]
+  },
+  {
+    "id": "no-resume-returner",
+    "fictional": true,
+    "background": "Participant without a resume, with past customer operations experience and recent volunteer coordination.",
+    "goal": "Return to paid work with predictable hours.",
+    "tests": [
+      "Offer no-resume path",
+      "Do not demand a career-break explanation",
+      "Translate volunteer skills truthfully",
+      "Keep compensation blocked without browsing"
+    ]
+  },
+  {
+    "id": "experienced-pivot",
+    "fictional": true,
+    "background": "Project coordinator interested in technical implementation roles, with demonstrated on-the-job learning but no coding experience.",
+    "goal": "Explore a supported career pivot.",
+    "tests": [
+      "Respect learning ability",
+      "Do not invent coding skills",
+      "Identify trainable versus essential gaps",
+      "Avoid a rigid percentage-match cutoff"
+    ]
+  }
+]

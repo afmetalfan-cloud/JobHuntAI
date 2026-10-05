@@ -1,0 +1,234 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Research record",
+  "type": "object",
+  "properties": {
+    "status": {
+      "enum": [
+        "pending",
+        "blocked",
+        "complete"
+      ]
+    },
+    "blocked_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "publisher": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "accessed_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "published_on": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "market": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "basis": {
+            "enum": [
+              "annual_base",
+              "hourly_base"
+            ]
+          },
+          "low": {
+            "type": "number",
+            "minimum": 0
+          },
+          "high": {
+            "type": "number",
+            "minimum": 0
+          },
+          "hours_per_week": {
+            "type": "number",
+            "minimum": 0
+          },
+          "weeks_per_year": {
+            "type": "number",
+            "minimum": 0
+          },
+          "verified": {
+            "type": "boolean"
+          },
+          "synthetic": {
+            "type": "boolean"
+          },
+          "overlap": {
+            "type": "string"
+          },
+          "limitations": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "publisher",
+          "url",
+          "accessed_on",
+          "published_on",
+          "market",
+          "currency",
+          "basis",
+          "low",
+          "high",
+          "verified",
+          "overlap",
+          "limitations"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "lane": {
+                "enum": [
+                  "current_scope",
+                  "external_move",
+                  "stretch"
+                ]
+              },
+              "status": {
+                "const": "supported"
+              },
+              "role_family": {
+                "type": "string"
+              },
+              "market": {
+                "type": "string"
+              },
+              "currency": {
+                "type": "string"
+              },
+              "low": {
+                "type": "number",
+                "minimum": 0
+              },
+              "target": {
+                "type": "number",
+                "minimum": 0
+              },
+              "high": {
+                "type": "number",
+                "minimum": 0
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "confidence": {
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              },
+              "rationale": {
+                "type": "string"
+              },
+              "gaps": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "lane",
+              "status",
+              "role_family",
+              "market",
+              "currency",
+              "low",
+              "target",
+              "high",
+              "evidence_ids",
+              "confidence",
+              "rationale",
+              "gaps"
+            ],
+            "additionalProperties": true
+          },
+          {
+            "type": "object",
+            "properties": {
+              "lane": {
+                "enum": [
+                  "current_scope",
+                  "external_move",
+                  "stretch"
+                ]
+              },
+              "status": {
+                "const": "unavailable"
+              },
+              "reason": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "lane",
+              "status",
+              "reason"
+            ],
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "annualization_assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "status",
+    "blocked_reasons",
+    "evidence",
+    "recommendations",
+    "annualization_assumptions",
+    "limitations"
+  ],
+  "additionalProperties": true
+}

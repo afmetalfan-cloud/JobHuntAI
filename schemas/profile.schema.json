@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Profile record",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "candidate_id": {
+      "type": "string"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "goal": {
+      "type": "string"
+    },
+    "approved": {
+      "type": "boolean"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "resume",
+              "interview",
+              "document",
+              "participant_review"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "file": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "description"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "employer": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "start": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "end": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "confirmed": {
+            "type": "boolean"
+          },
+          "source_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "employer",
+          "title",
+          "start",
+          "end",
+          "confirmed",
+          "source_refs"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "category": {
+            "enum": [
+              "achievement",
+              "responsibility",
+              "skill",
+              "education",
+              "certification",
+              "project",
+              "volunteer"
+            ]
+          },
+          "role_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "confirmed": {
+            "type": "boolean"
+          },
+          "estimated": {
+            "type": "boolean"
+          },
+          "assumptions": {
+            "type": "string"
+          },
+          "source_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "text",
+          "category",
+          "role_id",
+          "confirmed",
+          "estimated",
+          "assumptions",
+          "source_refs"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "version",
+    "candidate_id",
+    "display_name",
+    "goal",
+    "approved",
+    "sources",
+    "roles",
+    "claims",
+    "unknowns"
+  ],
+  "additionalProperties": true
+}

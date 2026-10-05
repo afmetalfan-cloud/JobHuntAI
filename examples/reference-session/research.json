@@ -1,0 +1,121 @@
+{
+  "status": "complete",
+  "blocked_reasons": [],
+  "evidence": [
+    {
+      "id": "evidence-1",
+      "title": "Synthetic salary fixture 1",
+      "publisher": "Fictional Publisher 1",
+      "url": "https://example.invalid/fixture/1",
+      "accessed_on": "2026-10-05",
+      "published_on": null,
+      "market": "Fictional sample market",
+      "currency": "USD",
+      "basis": "annual_base",
+      "low": 51000,
+      "high": 71000,
+      "verified": true,
+      "synthetic": true,
+      "overlap": "Synthetic coordination scope used only to test record relationships.",
+      "limitations": "Invented test values; no salary advice or real-world source."
+    },
+    {
+      "id": "evidence-2",
+      "title": "Synthetic salary fixture 2",
+      "publisher": "Fictional Publisher 2",
+      "url": "https://example.invalid/fixture/2",
+      "accessed_on": "2026-10-05",
+      "published_on": null,
+      "market": "Fictional sample market",
+      "currency": "USD",
+      "basis": "annual_base",
+      "low": 52000,
+      "high": 72000,
+      "verified": true,
+      "synthetic": true,
+      "overlap": "Synthetic coordination scope used only to test record relationships.",
+      "limitations": "Invented test values; no salary advice or real-world source."
+    },
+    {
+      "id": "evidence-3",
+      "title": "Synthetic salary fixture 3",
+      "publisher": "Fictional Publisher 3",
+      "url": "https://example.invalid/fixture/3",
+      "accessed_on": "2026-10-05",
+      "published_on": null,
+      "market": "Fictional sample market",
+      "currency": "USD",
+      "basis": "annual_base",
+      "low": 53000,
+      "high": 73000,
+      "verified": true,
+      "synthetic": true,
+      "overlap": "Synthetic coordination scope used only to test record relationships.",
+      "limitations": "Invented test values; no salary advice or real-world source."
+    }
+  ],
+  "recommendations": [
+    {
+      "lane": "current_scope",
+      "status": "supported",
+      "role_family": "Synthetic test role family",
+      "market": "Fictional sample market",
+      "currency": "USD",
+      "low": 52000,
+      "target": 62000,
+      "high": 72000,
+      "evidence_ids": [
+        "evidence-1",
+        "evidence-2",
+        "evidence-3"
+      ],
+      "confidence": "low",
+      "rationale": "Only exercises the record contract. Not a real recommendation.",
+      "gaps": []
+    },
+    {
+      "lane": "external_move",
+      "status": "supported",
+      "role_family": "Synthetic test role family",
+      "market": "Fictional sample market",
+      "currency": "USD",
+      "low": 52000,
+      "target": 62000,
+      "high": 72000,
+      "evidence_ids": [
+        "evidence-1",
+        "evidence-2",
+        "evidence-3"
+      ],
+      "confidence": "low",
+      "rationale": "Only exercises the record contract. Not a real recommendation.",
+      "gaps": []
+    },
+    {
+      "lane": "stretch",
+      "status": "supported",
+      "role_family": "Synthetic test role family",
+      "market": "Fictional sample market",
+      "currency": "USD",
+      "low": 52000,
+      "target": 62000,
+      "high": 72000,
+      "evidence_ids": [
+        "evidence-1",
+        "evidence-2",
+        "evidence-3"
+      ],
+      "confidence": "low",
+      "rationale": "Only exercises the record contract. Not a real recommendation.",
+      "gaps": [
+        "Fictional development gap"
+      ]
+    }
+  ],
+  "annualization_assumptions": [
+    "Annual base fixture; no hourly conversion."
+  ],
+  "limitations": [
+    "All data is invented for structural testing. Never use it as current market evidence."
+  ]
+}

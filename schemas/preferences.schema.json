@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Preferences record",
+  "type": "object",
+  "properties": {
+    "confirmed": {
+      "type": "boolean"
+    },
+    "market": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "preferences": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "learning_interests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "timeline": {
+      "type": "string"
+    },
+    "optional_minimum_base": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "confirmed",
+    "market",
+    "currency",
+    "requirements",
+    "preferences",
+    "learning_interests",
+    "timeline",
+    "optional_minimum_base",
+    "unknowns"
+  ],
+  "additionalProperties": true
+}

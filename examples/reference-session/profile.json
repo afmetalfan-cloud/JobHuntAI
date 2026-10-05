@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "candidate_id": "fictional-reference",
+  "display_name": "Fictional Candidate",
+  "goal": "Explore service operations and an adjacent project role",
+  "approved": true,
+  "sources": [
+    {
+      "id": "interview-1",
+      "kind": "interview",
+      "description": "Entirely fictional interview fixture; not an actual person."
+    }
+  ],
+  "roles": [
+    {
+      "id": "role-1",
+      "employer": "Fictional Organization",
+      "title": "Service Coordinator",
+      "start": "2021-06",
+      "end": "Present",
+      "confirmed": true,
+      "source_refs": [
+        "interview-1"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim-1",
+      "text": "Coordinated service requests, documented handoffs, and trained peers on the workflow.",
+      "category": "responsibility",
+      "role_id": "role-1",
+      "confirmed": true,
+      "estimated": false,
+      "assumptions": "",
+      "source_refs": [
+        "interview-1"
+      ]
+    },
+    {
+      "id": "claim-2",
+      "text": "Reduced repeat handoff errors through a revised checklist.",
+      "category": "achievement",
+      "role_id": "role-1",
+      "confirmed": true,
+      "estimated": false,
+      "assumptions": "",
+      "source_refs": [
+        "interview-1"
+      ]
+    },
+    {
+      "id": "claim-3",
+      "text": "Used spreadsheets to organize priorities and review service activity.",
+      "category": "skill",
+      "role_id": null,
+      "confirmed": true,
+      "estimated": false,
+      "assumptions": "",
+      "source_refs": [
+        "interview-1"
+      ]
+    }
+  ],
+  "unknowns": [
+    "No quantified error reduction is available; keep the outcome qualitative."
+  ]
+}

@@ -1,0 +1,10 @@
+[
+  {"id":"intake","instruction":"workflows/01-intake.md","outputs":["intake.md"]},
+  {"id":"interview","instruction":"workflows/02-experience.md","outputs":["interview-notes.md"]},
+  {"id":"preferences","instruction":"workflows/03-preferences.md","outputs":["career-criteria.md"]},
+  {"id":"master","instruction":"workflows/04-master.md","outputs":["master-resume.md","open-questions.md"]},
+  {"id":"roles","instruction":"workflows/05-roles.md","outputs":["role-map.md"]},
+  {"id":"market","instruction":"workflows/06-market.md","outputs":["compensation-report.md"]},
+  {"id":"profiles","instruction":"workflows/07-profiles.md","outputs":["profile-update-plan.md"]},
+  {"id":"action","instruction":"workflows/08-action.md","outputs":["career-action-plan.md"]}
+]
